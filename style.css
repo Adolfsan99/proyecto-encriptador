@@ -1,0 +1,23 @@
+main.app{
+    display: flex;
+    flex-direction: row;
+}
+section.entrada {
+    background-color: gray;
+    color: white;
+    width: 50%;
+}
+section.salida {
+    background-color: black;
+    color: greenyellow;
+    width: 50%;
+}
+
+footer{
+    background-color: blue;
+    color: white;
+}
+
+a{
+    color: white;
+}
