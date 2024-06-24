@@ -9,32 +9,34 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Encriptador/Desencriptador</h1>
-        </nav>
-    </header>
-    <main class="app">
-        <section class="entrada">
-            <h2>Entrada de texto</h2>
-            <textarea name="entrada" id="entrada-usuario"></textarea>
-            <div class="contenedor-botones">
-                <button onclick="encriptar()" id="boton-encriptar">Encriptar</button>
-                <button onclick="desencriptar()" id="boton-desencriptar">Desencriptar</button>
+    <div class="app-contenedor">
+        <header>
+            <nav>
+                <h1>Encriptador/Desencriptador</h1>
+            </nav>
+        </header>
+        <main class="app">
+            <div class="entrada">
+                <h2>Entrada de texto</h2>
+                <textarea name="entrada" id="entrada-usuario"></textarea>
+                <div class="contenedor-botones">
+                    <button onclick="encriptar()" id="boton-encriptar">Encriptar</button>
+                    <button onclick="desencriptar()" id="boton-desencriptar">Desencriptar</button>
+                </div>
             </div>
-        </section>
-        <section class="salida">
-            <h2>Salida de texto</h2>
-            <div id="texto-encriptado" class="salida-usuario">
-                <img id="sin-entrada-de-texto" src="./assets/sin-entrada-del-usuario.png" alt="sin-entrada-del-usuario">
+            <div class="salida">
+                <h2>Salida de texto</h2>
+                <div id="texto-encriptado" class="salida-usuario">
+                    <img id="sin-entrada-de-texto" src="./assets/entrada-vacia.png" alt="Entrada vacia">
+                </div>
+                <button onclick="copiar()">Copiar</button>
             </div>
-            <button onclick="copiar()">Copiar</button>
-        </section>
-    </main>
-    <footer>
-        Desarrollado por <a href="https://github.com/Adolfsan99/proyecto-encriptador" target="_blank">Adolfo Sánchez
-            López</a>
-    </footer>
+        </main>
+        <footer>
+            Desarrollado por <a href="https://github.com/Adolfsan99/proyecto-encriptador" target="_blank">Adolfo Sánchez
+                López</a>
+        </footer>
+    </div>
     <script src="./script.js"></script>
 </body>
 

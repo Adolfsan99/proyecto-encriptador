@@ -1,23 +1,149 @@
-main.app{
-    display: flex;
-    flex-direction: row;
+@import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Danfo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+:root {
+  --tiny5-: "Tiny5", sans-serif;
+  --danfo-: "Danfo", serif;
+  --SS-: "Silkscreen", sans-serif;
+  --gruppo-: "Gruppo", sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--gruppo-);
+  font-size: 1rem;
+}
+html,
+body {
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+nav,
+footer {
+  text-align: center;
+  color: white;
+  padding: 1.75rem 0rem;
+}
+img {
+  height: 15rem;
+  width: 15rem;
+}
+textarea {
+  height: 8rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  width: -webkit-fill-available;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.19);
+  color: white;
+}
+button {
+  padding: 10px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  border: none;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgb(51, 40, 255) 0%,
+    rgb(9, 121, 39) 100%,
+    rgb(198, 255, 0) 100%
+  );
+  border-radius: 15px 50px 30px;
+}
+button:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+main.app {
+  display: flex;
+  height: 28rem;
 }
 section.entrada {
-    background-color: gray;
-    color: white;
-    width: 50%;
+  background-color: transparent;
+  color: white;
+  width: 50%;
+  padding: 2rem;
 }
 section.salida {
-    background-color: black;
-    color: greenyellow;
-    width: 50%;
+  background-color: black;
+  color: greenyellow;
+  width: 50%;
+  padding: 2rem;
 }
-
-footer{
-    background-color: blue;
-    color: white;
+div.salida-usuario {
+  padding: 1rem;
+  height: auto;
+  margin: 1rem;
 }
-
-a{
-    color: white;
+div.entrada {
+  width: 50%;
+  color: white;
+  text-align: center;
+  background-color: #ffffff0d;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+div.salida {
+  width: 50%;
+  color: rgb(0, 255, 0);
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+footer {
+  background: linear-gradient(
+    90deg,
+    rgb(51, 40, 255) 0%,
+    rgb(9, 121, 39) 100%,
+    rgb(198, 255, 0) 100%
+  );
+  color: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+a {
+  color: white;
+}
+@media (max-width: 600px) {
+  main.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  footer,
+  div.entrada,
+  div.salida {
+    padding: 2rem 0rem;
+    width: 100%;
+  }
+  button {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 300px) {
+  main.app {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    width: auto;
+  }
+  nav {
+    text-align: center;
+    padding: 2rem 0rem;
+    overflow-wrap: break-word;
+  }
+  img {
+    width: 100%;
+    height: fit-content;
+  }
+  div.entrada,
+  div.salida {
+    margin: 0px;
+  }
 }

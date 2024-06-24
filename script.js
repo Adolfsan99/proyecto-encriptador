@@ -19,22 +19,27 @@ function actualizarSalida(texto, encriptado) {
 function encriptar() {
   /* nuestra entrada sera igual a entrada-usuario es decir lo que pongamos en textarea */
   let entrada = document.getElementById("entrada-usuario").value;
-  /* proceso de encriptación */
-  if (
-    entrada.includes("a") ||
-    entrada.includes("e") ||
-    entrada.includes("i") ||
-    entrada.includes("o") ||
-    entrada.includes("u")
-  ) {
-    /* reglas de encriptación */
-    entrada = entrada.replaceAll("a", "ai");
-    entrada = entrada.replaceAll("e", "enter");
-    entrada = entrada.replaceAll("i", "imes");
-    entrada = entrada.replaceAll("o", "ober");
-    entrada = entrada.replaceAll("u", "ufat");
+  /* verificación texto vacio */
+  if (entrada == "") {
+    alert("Ingresa un texto para encriptar");
+  } else {
+    /* proceso de encriptación */
+    if (
+      entrada.includes("a") ||
+      entrada.includes("e") ||
+      entrada.includes("i") ||
+      entrada.includes("o") ||
+      entrada.includes("u")
+    ) {
+      /* reglas de encriptación */
+      entrada = entrada.replaceAll("a", "ai");
+      entrada = entrada.replaceAll("e", "enter");
+      entrada = entrada.replaceAll("i", "imes");
+      entrada = entrada.replaceAll("o", "ober");
+      entrada = entrada.replaceAll("u", "ufat");
+    }
+    actualizarSalida(entrada, true);
   }
-  actualizarSalida(entrada, true);
 }
 
 function desencriptar() {
@@ -46,7 +51,8 @@ function desencriptar() {
     entrada.includes("enter") ||
     entrada.includes("imes") ||
     entrada.includes("ober") ||
-    entrada.includes("ufat")
+    entrada.includes("ufat") ||
+    entrada.includes("mes")
   ) {
     /* reglas de desencriptación */
     entrada = entrada.replaceAll("ai", "a");
@@ -54,6 +60,7 @@ function desencriptar() {
     entrada = entrada.replaceAll("imes", "i");
     entrada = entrada.replaceAll("ober", "o");
     entrada = entrada.replaceAll("ufat", "u");
+    entrada = entrada.replaceAll("mes", "");
   }
   /* desencriptar tambien el contenido del textarea en caso de que este encriptado */
   document.getElementById("entrada-usuario").value = entrada;
