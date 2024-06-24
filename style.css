@@ -39,6 +39,7 @@ textarea {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.19);
   color: white;
+  resize: none;
 }
 button {
   padding: 10px;
