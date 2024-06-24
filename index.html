@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,20 +16,26 @@
     </header>
     <main class="app">
         <section class="entrada">
-            <h2>Texto desencriptado</h2>
-            <textarea name="entrada" id="entrada-usuario">Escriba el texto aqui...</textarea>
+            <h2>Entrada de texto</h2>
+            <textarea name="entrada" id="entrada-usuario"></textarea>
             <div class="contenedor-botones">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button onclick="encriptar()" id="boton-encriptar">Encriptar</button>
+                <button onclick="desencriptar()" id="boton-desencriptar">Desencriptar</button>
             </div>
         </section>
         <section class="salida">
-            <h2>Texto encriptado</h2>
-            <div class="salida-usuario">Ezcjawj eah aedsaqi...</div>
+            <h2>Salida de texto</h2>
+            <div id="texto-encriptado" class="salida-usuario">
+                <img id="sin-entrada-de-texto" src="./assets/sin-entrada-del-usuario.png" alt="sin-entrada-del-usuario">
+            </div>
+            <button onclick="copiar()">Copiar</button>
         </section>
     </main>
     <footer>
-        Desarrollado por <a href="https://github.com/Adolfsan99/proyecto-encriptador" target="_blank">Adolfo Sánchez López</a>
+        Desarrollado por <a href="https://github.com/Adolfsan99/proyecto-encriptador" target="_blank">Adolfo Sánchez
+            López</a>
     </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>
