@@ -42,7 +42,7 @@ proyecto-encriptador/
 
 ## 🟡 Accede al proyecto [aqui](https://adolfsan99.github.io/proyecto-encriptador/)
 
-### Desarrollado por [Adolfo Sánchez López](https://github.com/Adolfsan99).
+## Desarrollado por [Adolfo Sánchez López](https://github.com/Adolfsan99).
 
 
 
