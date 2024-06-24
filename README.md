@@ -40,7 +40,14 @@ proyecto-encriptador/
 ### Salida de Texto
 
 - Muestra el resultado del texto encriptado o desencriptado.
+
+### Copiar Texto
+
 - Botón para copiar el texto resultante.
+
+### Resetear
+
+- Botón para restablecer la aplicación.
 
 ## Soporte para mayúsculas y minúsculas
 
