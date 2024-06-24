@@ -29,7 +29,12 @@ function encriptar() {
       entrada.includes("e") ||
       entrada.includes("i") ||
       entrada.includes("o") ||
-      entrada.includes("u")
+      entrada.includes("u") ||
+      entrada.includes("A") ||
+      entrada.includes("E") ||
+      entrada.includes("I") ||
+      entrada.includes("O") ||
+      entrada.includes("U")
     ) {
       /* reglas de encriptación */
       entrada = entrada.replaceAll("a", "ai");
@@ -37,6 +42,11 @@ function encriptar() {
       entrada = entrada.replaceAll("i", "imes");
       entrada = entrada.replaceAll("o", "ober");
       entrada = entrada.replaceAll("u", "ufat");
+      entrada = entrada.replaceAll("A", "AI");
+      entrada = entrada.replaceAll("E", "ENTER");
+      entrada = entrada.replaceAll("I", "IMES");
+      entrada = entrada.replaceAll("O", "OBER");
+      entrada = entrada.replaceAll("U", "UFAF");
     }
     actualizarSalida(entrada, true);
   }
@@ -52,7 +62,13 @@ function desencriptar() {
     entrada.includes("imes") ||
     entrada.includes("ober") ||
     entrada.includes("ufat") ||
-    entrada.includes("mes")
+    entrada.includes("mes") ||
+    entrada.includes("AI") ||
+    entrada.includes("ENTER") ||
+    entrada.includes("IMES") ||
+    entrada.includes("OBER") ||
+    entrada.includes("UFAF") ||
+    entrada.includes("MES")
   ) {
     /* reglas de desencriptación */
     entrada = entrada.replaceAll("ai", "a");
@@ -61,6 +77,12 @@ function desencriptar() {
     entrada = entrada.replaceAll("ober", "o");
     entrada = entrada.replaceAll("ufat", "u");
     entrada = entrada.replaceAll("mes", "");
+    entrada = entrada.replaceAll("AI", "A");
+    entrada = entrada.replaceAll("ENTER", "E");
+    entrada = entrada.replaceAll("IMES", "I");
+    entrada = entrada.replaceAll("OBER", "O");
+    entrada = entrada.replaceAll("UFAF", "U");
+    entrada = entrada.replaceAll("MES", "");
   }
   /* desencriptar tambien el contenido del textarea en caso de que este encriptado */
   document.getElementById("entrada-usuario").value = entrada;
