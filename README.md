@@ -18,12 +18,12 @@ proyecto-encriptador/
     ├── entrada-vacia.png
 ```
 
-### 🟡 Archivos Principales
+## 🟡 Archivos Principales
 - **index.html**: Contiene la estructura principal de la aplicación.
 - **style.css**: Hoja de estilos que define el diseño y la presentación.
 - **script.js**: Archivo JavaScript que maneja la lógica de encriptado, desencriptado y otras funcionalidades.
 
-### 🟡 Recursos
+## 🟡 Recursos
 - **favicon.png**: Icono de la aplicación.
 - **entrada-vacia.png**: Imagen mostrada cuando no hay texto de entrada.
 
@@ -42,7 +42,7 @@ proyecto-encriptador/
 
 ## 🟡 Accede al proyecto [aqui](https://adolfsan99.github.io/proyecto-encriptador/)
 
-### Desarrollado por [Adolfo Sánchez López](https://github.com/Adolfsan99/proyecto-encriptador).
+### Desarrollado por [Adolfo Sánchez López](https://github.com/Adolfsan99).
 
 
 
