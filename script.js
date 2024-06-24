@@ -54,14 +54,20 @@ function desencriptar() {
   entrada = entrada.replace(/imes/g, "i");
   entrada = entrada.replace(/ober/g, "o");
   entrada = entrada.replace(/ufat/g, "u");
+  entrada = entrada.replace(/mes/g, "");
   entrada = entrada.replace(/AI/g, "A");
   entrada = entrada.replace(/ENTER/g, "E");
   entrada = entrada.replace(/IMES/g, "I");
   entrada = entrada.replace(/OBER/g, "O");
   entrada = entrada.replace(/UFAF/g, "U");
+  entrada = entrada.replace(/MES/g, "");
 
   document.getElementById("entrada-usuario").value = entrada;
   actualizarSalida(entrada, false);
+}
+
+function resetear() {
+  location.reload();
 }
 
 function copiar() {

@@ -53,10 +53,21 @@ button {
     rgb(198, 255, 0) 100%
   );
   border-radius: 15px 50px 30px;
+  font-weight: bold;
 }
 button:hover {
   transition-duration: 0.5s;
   transform: scale(1.1);
+}
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f2f2f2;
+  /*color: #999;*/
+}
+button[disabled]:hover {
+  box-shadow: none;
+  border: 1px solid #ccc;
 }
 main.app {
   display: flex;
