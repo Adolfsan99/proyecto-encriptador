@@ -1,12 +1,9 @@
-/* funcion de actualizar el texto de salida */
 function actualizarSalida(texto, encriptado) {
-  /* manejo de ocultacion de la imagen que aparece cuando no hay texto */
   if (document.getElementById("sin-entrada-de-texto")) {
     document.getElementById("sin-entrada-de-texto").setAttribute("hidden", "");
   }
   document.getElementById("texto-encriptado").innerText = texto;
 
-  /* manejo de bloqueo de botones al encriptar y desencriptar */
   if (encriptado) {
     document.getElementById("boton-encriptar").setAttribute("disabled", "");
     document.getElementById("boton-desencriptar").removeAttribute("disabled");
@@ -17,82 +14,57 @@ function actualizarSalida(texto, encriptado) {
 }
 
 function encriptar() {
-  /* nuestra entrada sera igual a entrada-usuario es decir lo que pongamos en textarea */
   let entrada = document.getElementById("entrada-usuario").value;
-  /* verificación texto vacio */
-  if (entrada == "") {
+  if (entrada === "") {
     alert("Ingresa un texto para encriptar");
   } else {
-    /* proceso de encriptación */
-    if (
-      entrada.includes("a") ||
-      entrada.includes("e") ||
-      entrada.includes("i") ||
-      entrada.includes("o") ||
-      entrada.includes("u") ||
-      entrada.includes("A") ||
-      entrada.includes("E") ||
-      entrada.includes("I") ||
-      entrada.includes("O") ||
-      entrada.includes("U")
-    ) {
-      /* reglas de encriptación */
-      entrada = entrada.replaceAll("a", "ai");
-      entrada = entrada.replaceAll("e", "enter");
-      entrada = entrada.replaceAll("i", "imes");
-      entrada = entrada.replaceAll("o", "ober");
-      entrada = entrada.replaceAll("u", "ufat");
-      entrada = entrada.replaceAll("A", "AI");
-      entrada = entrada.replaceAll("E", "ENTER");
-      entrada = entrada.replaceAll("I", "IMES");
-      entrada = entrada.replaceAll("O", "OBER");
-      entrada = entrada.replaceAll("U", "UFAF");
-    }
+    // Reemplazos en el orden adecuado para evitar problemas de interferencia
+    entrada = entrada.replace(/a/g, "1");
+    entrada = entrada.replace(/e/g, "2");
+    entrada = entrada.replace(/i/g, "3");
+    entrada = entrada.replace(/o/g, "4");
+    entrada = entrada.replace(/u/g, "5");
+    entrada = entrada.replace(/A/g, "6");
+    entrada = entrada.replace(/E/g, "7");
+    entrada = entrada.replace(/I/g, "8");
+    entrada = entrada.replace(/O/g, "9");
+    entrada = entrada.replace(/U/g, "0");
+
+    // Reemplazos con los valores encriptados
+    entrada = entrada.replace(/1/g, "ai");
+    entrada = entrada.replace(/2/g, "enter");
+    entrada = entrada.replace(/3/g, "imes");
+    entrada = entrada.replace(/4/g, "ober");
+    entrada = entrada.replace(/5/g, "ufat");
+    entrada = entrada.replace(/6/g, "AI");
+    entrada = entrada.replace(/7/g, "ENTER");
+    entrada = entrada.replace(/8/g, "IMES");
+    entrada = entrada.replace(/9/g, "OBER");
+    entrada = entrada.replace(/0/g, "UFAF");
+
     actualizarSalida(entrada, true);
   }
 }
 
 function desencriptar() {
-  /* nuestra entrada sera igual a entrada-usuario es decir lo que pongamos en textarea */
   let entrada = document.getElementById("entrada-usuario").value;
-  /* proceso de desencriptación */
-  if (
-    entrada.includes("ai") ||
-    entrada.includes("enter") ||
-    entrada.includes("imes") ||
-    entrada.includes("ober") ||
-    entrada.includes("ufat") ||
-    entrada.includes("mes") ||
-    entrada.includes("AI") ||
-    entrada.includes("ENTER") ||
-    entrada.includes("IMES") ||
-    entrada.includes("OBER") ||
-    entrada.includes("UFAF") ||
-    entrada.includes("MES")
-  ) {
-    /* reglas de desencriptación */
-    entrada = entrada.replaceAll("ai", "a");
-    entrada = entrada.replaceAll("enter", "e");
-    entrada = entrada.replaceAll("imes", "i");
-    entrada = entrada.replaceAll("ober", "o");
-    entrada = entrada.replaceAll("ufat", "u");
-    entrada = entrada.replaceAll("mes", "");
-    entrada = entrada.replaceAll("AI", "A");
-    entrada = entrada.replaceAll("ENTER", "E");
-    entrada = entrada.replaceAll("IMES", "I");
-    entrada = entrada.replaceAll("OBER", "O");
-    entrada = entrada.replaceAll("UFAF", "U");
-    entrada = entrada.replaceAll("MES", "");
-  }
-  /* desencriptar tambien el contenido del textarea en caso de que este encriptado */
+  // Reemplazos con los valores desencriptados
+  entrada = entrada.replace(/ai/g, "a");
+  entrada = entrada.replace(/enter/g, "e");
+  entrada = entrada.replace(/imes/g, "i");
+  entrada = entrada.replace(/ober/g, "o");
+  entrada = entrada.replace(/ufat/g, "u");
+  entrada = entrada.replace(/AI/g, "A");
+  entrada = entrada.replace(/ENTER/g, "E");
+  entrada = entrada.replace(/IMES/g, "I");
+  entrada = entrada.replace(/OBER/g, "O");
+  entrada = entrada.replace(/UFAF/g, "U");
+
   document.getElementById("entrada-usuario").value = entrada;
   actualizarSalida(entrada, false);
 }
 
 function copiar() {
-  //console.log("Copiando");
-
-  /* obtenemos el elemento que contiene el texto */
   var textoencriptado = document.getElementById("texto-encriptado");
 
   if (!textoencriptado) {
@@ -100,14 +72,12 @@ function copiar() {
     return;
   }
 
-  /* creamos un rango para seleccionar el texto */
   var range = document.createRange();
   range.selectNodeContents(textoencriptado);
   var selection = window.getSelection();
   selection.removeAllRanges();
   selection.addRange(range);
 
-  /*  copiamos el texto al portapapeles */
   try {
     var successful = document.execCommand("copy");
     if (successful) {
@@ -119,6 +89,5 @@ function copiar() {
     alert("Error al intentar copiar el texto: " + err);
   }
 
-  /* deseleccionamos el texto */
   selection.removeAllRanges();
 }
