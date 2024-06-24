@@ -61,20 +61,28 @@ function desencriptar() {
 }
 
 function copiar() {
-  // obtenemos el elemento que contiene el texto
+  //console.log("Copiando");
+
+  /* obtenemos el elemento que contiene el texto */
   var textoencriptado = document.getElementById("texto-encriptado");
 
-  // creamos un rango para selecciar el texto
+  if (!textoencriptado) {
+    console.error("No se encontró el elemento con id 'texto-encriptado'");
+    return;
+  }
+
+  /* creamos un rango para seleccionar el texto */
   var range = document.createRange();
   range.selectNodeContents(textoencriptado);
   var selection = window.getSelection();
   selection.removeAllRanges();
   selection.addRange(range);
 
-  // copiamos el texto al portapapeles
+  /*  copiamos el texto al portapapeles */
   try {
     var successful = document.execCommand("copy");
     if (successful) {
+      alert("Texto copiado exitosamente");
     } else {
       alert("No se pudo copiar el texto");
     }
@@ -82,6 +90,6 @@ function copiar() {
     alert("Error al intentar copiar el texto: " + err);
   }
 
-  // deseleccionamos el texto
+  /* deseleccionamos el texto */
   selection.removeAllRanges();
 }
