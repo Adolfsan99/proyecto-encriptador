@@ -41,6 +41,10 @@ proyecto-encriptador/
 
 - Muestra el resultado del texto encriptado o desencriptado.
 
+### Encriptación de numeros
+
+- Soporte para encriptar numeros.
+
 ### Copiar Texto
 
 - Botón para copiar el texto resultante.
