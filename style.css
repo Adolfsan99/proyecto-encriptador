@@ -124,7 +124,7 @@ footer {
 a {
   color: white;
 }
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   main.app {
     display: flex;
     flex-direction: column;
