@@ -36,11 +36,11 @@ function encriptar() {
     entrada = entrada.replace(/3/g, "imes");
     entrada = entrada.replace(/4/g, "ober");
     entrada = entrada.replace(/5/g, "ufat");
-    entrada = entrada.replace(/6/g, "AI");
-    entrada = entrada.replace(/7/g, "ENTER");
-    entrada = entrada.replace(/8/g, "IMES");
-    entrada = entrada.replace(/9/g, "OBER");
-    entrada = entrada.replace(/0/g, "UFAF");
+    entrada = entrada.replace(/6/g, "IA");
+    entrada = entrada.replace(/7/g, "RETNE");
+    entrada = entrada.replace(/8/g, "SEIM");
+    entrada = entrada.replace(/9/g, "REBO");
+    entrada = entrada.replace(/0/g, "FAFU");
 
     actualizarSalida(entrada, true);
   }
@@ -55,11 +55,11 @@ function desencriptar() {
   entrada = entrada.replace(/ober/g, "o");
   entrada = entrada.replace(/ufat/g, "u");
   entrada = entrada.replace(/mes/g, "");
-  entrada = entrada.replace(/AI/g, "A");
-  entrada = entrada.replace(/ENTER/g, "E");
-  entrada = entrada.replace(/IMES/g, "I");
-  entrada = entrada.replace(/OBER/g, "O");
-  entrada = entrada.replace(/UFAF/g, "U");
+  entrada = entrada.replace(/IA/g, "A");
+  entrada = entrada.replace(/RETNE/g, "E");
+  entrada = entrada.replace(/SEIM/g, "I");
+  entrada = entrada.replace(/REBO/g, "O");
+  entrada = entrada.replace(/FAFU/g, "U");
   entrada = entrada.replace(/MES/g, "");
 
   document.getElementById("entrada-usuario").value = entrada;
