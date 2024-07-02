@@ -61,6 +61,10 @@ proyecto-encriptador/
 
 - La aplicación soporta el error "aimes", más información de este error en el Changelog
 
+### Selección de temas
+
+- Posibilidad de cambiar el tema del encriptador por 3 temas.
+
 ---
 
 ## Changelog
