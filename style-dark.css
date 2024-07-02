@@ -130,6 +130,7 @@ div.themes {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 740px) {
   main.app {
@@ -149,7 +150,7 @@ div.themes {
   }
   div.themes {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
 }
