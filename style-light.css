@@ -10,10 +10,9 @@
   --color-verde: rgb(9, 121, 39) 100; /* Color claro */
   --color-gradiente: linear-gradient(
     90deg,
-    rgb(198, 255, 0) 0%,
-    /* Cambiado a un color claro */ rgb(9, 121, 39) 100%,
-    /* Cambiado a un color oscuro */ rgb(51, 40, 255) 100%
-      /* Cambiado a un color oscuro */
+    rgb(51, 40, 255) 0%,
+    rgb(9, 121, 39) 100%,
+    rgb(198, 255, 0) 100%
   );
   --color-blanco: black; /* Cambiado a un color oscuro */
   --color-negro: #f5f5f5; /* Cambiado a un color claro */
