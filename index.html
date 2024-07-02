@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-dark.css" id="theme">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
 
 <body>
     <div class="app-contenedor">
+
         <header>
             <nav>
                 <h1>Encriptador/Desencriptador</h1>
             </nav>
         </header>
+
         <main class="app">
+            <div class="themes">
+                <button onclick="cambiarTema('dark')">Tema oscuro</button>
+                <button onclick="cambiarTema('light')">Tema claro</button>
+                <button onclick="cambiarTema('colombia')">Tema Colombia</button>
+            </div>
             <div class="entrada">
                 <h2>Entrada de texto</h2>
                 <textarea name="entrada" id="entrada-usuario"></textarea>
@@ -37,10 +44,12 @@
                 <button onclick="copiar()">Copiar</button>
             </div>
         </main>
+
         <footer>
             Desarrollado por <a href="https://github.com/Adolfsan99/proyecto-encriptador" target="_blank">Adolfo Sánchez
                 López</a>
         </footer>
+
     </div>
     <script src="./script.js"></script>
 </body>

@@ -97,3 +97,24 @@ function copiar() {
 
   selection.removeAllRanges();
 }
+
+// Función para cambiar el tema
+function cambiarTema(theme) {
+  var themeFile = "";
+  switch (theme) {
+    case "dark":
+      themeFile = "style-dark.css";
+      break;
+    case "light":
+      themeFile = "style-light.css";
+      break;
+    case "colombia":
+      themeFile = "style-colombia.css";
+      break;
+    default:
+      return;
+  }
+  // Obtener el elemento de hoja de estilo y cambiar su href
+  var stylesheet = document.getElementById("theme");
+  stylesheet.href = themeFile;
+}
