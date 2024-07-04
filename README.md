@@ -53,7 +53,7 @@ proyecto-encriptador/
 
 - Botón para restablecer la aplicación.
 
-## Soporte para mayúsculas y minúsculas
+## Soporte para mayúsculas y minúsculas (mayusculas retirado)
 
 - La aplicación soporta mayúsculas y minúsculas en el texto de entrada.
 
