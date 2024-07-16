@@ -36,6 +36,11 @@ function encriptar() {
     entrada = entrada.replace(/3/g, "imes");
     entrada = entrada.replace(/4/g, "ober");
     entrada = entrada.replace(/5/g, "ufat");
+    entrada = entrada.replace(/6/g, "ses");
+    entrada = entrada.replace(/7/g, "set");
+    entrada = entrada.replace(/8/g, "oroch");
+    entrada = entrada.replace(/9/g, "nein");
+    entrada = entrada.replace(/0/g, "zeim");
     //entrada = entrada.replace(/6/g, "AI");
     //entrada = entrada.replace(/7/g, "ENTER");
     //entrada = entrada.replace(/8/g, "IMES");
